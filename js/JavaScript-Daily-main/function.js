@@ -4,7 +4,7 @@
 // function user(name){
 //     return 'hello ' +name+'!';
 // }
-// console.log(user('angha'));
+// console.log(user('purvam'));
 
 
 // function assigned to a variable 

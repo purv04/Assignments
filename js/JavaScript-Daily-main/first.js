@@ -1,5 +1,5 @@
 console.log("hello world");
-console.log("angha varangaonkar");
+console.log("purvam chaturvedi");
 
 // this is consider as a integer or a number 
 console.log(3);
@@ -17,7 +17,7 @@ console.log("3+4");
 a=36;
 console.log(a);
 
-x="angha";
+x="purvam";
 console.log(x);
 
 
@@ -25,6 +25,6 @@ console.log(x);
 // console.log(a);
 // a=20;
 // console.log(a);
-//  a="angha ";
+//  a="purvam ";
 // console.log(a);
 

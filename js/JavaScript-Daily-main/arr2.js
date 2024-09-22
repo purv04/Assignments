@@ -2,7 +2,7 @@
 // arr.push(23);
 // console.log(arr);
 
-arr=[4,'angha',7.9,true,[4,7,8,9]]
+arr=[4,'purvam',7.9,true,[4,7,8,9]]
 // console.log(arr);
 console.log(typeof(arr));
 

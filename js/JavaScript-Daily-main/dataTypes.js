@@ -1,6 +1,6 @@
 a=4;//integer
 b=3.14;//float
-c="angha";//string
+c="purvam";//string
 d=true;//boolean
 e='q';//string
 
