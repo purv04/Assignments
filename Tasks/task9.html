@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve innerHTML and textContent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-top: 10px;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Retrieve HTML Content</h1>
+    <div id="htmlElement">
+        <strong>This is a bold statement</strong> with <em>some italic text</em> and <a href="#">a link</a>.
+    </div>
+
+    <button id="getInnerHTMLBtn">Get innerHTML</button>
+    <button id="getTextContentBtn">Get textContent</button>
+
+    <div class="output" id="outputInnerHTML"></div>
+    <div class="output" id="outputTextContent"></div>
+
+    <script>
+        // For innerHTML
+        document.getElementById("getInnerHTMLBtn").onclick = function() {
+            const htmlContent = document.getElementById("htmlElement").innerHTML; 
+            document.getElementById("outputInnerHTML").textContent = `innerHTML: ${htmlContent}`; // Use backticks for template literals
+        };
+
+        // For textContent
+        document.getElementById("getTextContentBtn").onclick = function() {
+            const textContent = document.getElementById("htmlElement").textContent; 
+            document.getElementById("outputTextContent").textContent = `textContent: ${textContent}`; // Use backticks for template literals
+        };
+    </script>
+
+</body>
+</html>

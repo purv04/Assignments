@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage CSS Classes</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+        #container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="addClassBtn">Add Highlight Class</button>
+    <button id="removeClassBtn">Remove Highlight Class</button>
+    <div id="toggleDiv" style="padding: 10px; border: 1px solid black; cursor: pointer;">
+        Click me to toggle class!
+    </div>
+
+    <button id="createElementBtn">Create New Element</button>
+    <div id="container"></div>
+
+    <script>
+        const toggleDiv = document.getElementById("toggleDiv");
+        const container = document.getElementById("container");
+
+        
+        document.getElementById("addClassBtn").onclick = function() {
+            toggleDiv.classList.add("highlight");
+        };
+
+
+        document.getElementById("removeClassBtn").onclick = function() {
+            toggleDiv.classList.remove("highlight");
+        };
+
+  
+        toggleDiv.onclick = function() {
+            this.classList.toggle("highlight");
+        };
+
+        
+        document.getElementById("createElementBtn").onclick = function() {
+            const newElement = document.createElement("div");
+            newElement.textContent = "I am a new element!";
+            newElement.style.padding = "10px";
+            newElement.style.border = "1px solid black";
+            newElement.style.marginTop = "10px";
+
+           
+            newElement.onclick = function() {
+                this.classList.toggle("hidden");
+            };
+
+            container.appendChild(newElement);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hover to Change Color</title>
+  <style>
+    #hoverDiv {
+      width: 100px;
+      height: 100px;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div id="hoverDiv" onmouseover="changeBackgroundColor()" onmouseout="resetBackgroundColor()"></div>
+
+  <script>
+    function changeBackgroundColor() {
+      document.getElementById("hoverDiv").style.backgroundColor = "blue";
+    }
+
+    function resetBackgroundColor() {
+      document.getElementById("hoverDiv").style.backgroundColor = "lightgray";
+    }
+  </script>
+</body>
+</html>

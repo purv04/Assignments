@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Submission</title>
+    <style>
+        form {
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"] {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+            max-width: 300px;
+        }
+        input[type="submit"] {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="displayMessage(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" aria-required="true"><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" aria-required="true"><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function displayMessage(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            const name = document.getElementById("name").value;
+            document.getElementById("message").textContent = "Thank you for submitting, " + name + "!";
+        }
+    </script>
+</body>
+</html>

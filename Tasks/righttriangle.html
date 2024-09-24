@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right-Angled Triangle</title>
+    <style>
+        pre {
+            font-family: monospace; 
+            white-space: pre; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Right-Angled Triangle</h1>
+    <button id="drawTriangleButton">Draw Right-Angled Triangle</button>
+    <pre id="triangleOutput"></pre>
+
+    <script>
+        function drawRightAngledTriangle(height) {
+            let triangle = ""; 
+            for (let i = 1; i <= height; i++) {
+                
+                triangle += "* ".repeat(i) + "\n"; 
+            }
+            document.getElementById("triangleOutput").textContent = triangle; 
+        }
+
+        document.getElementById("drawTriangleButton").onclick = function() {
+            const height = 5; 
+            drawRightAngledTriangle(height); 
+        };
+    </script>
+
+</body>
+</html>

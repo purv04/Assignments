@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <button onclick="addListItem()"> Add Item</button>
+        <script>
+            function addListItem() {
+                const newItem = document.createElement('li');
+                newItem.textContent = 'Item 3';
+                const list= document.getElementById('myList');
+                list.appendChild(newItem)
+            }
+        </script>
+    </ul>
+</body>
+</html>

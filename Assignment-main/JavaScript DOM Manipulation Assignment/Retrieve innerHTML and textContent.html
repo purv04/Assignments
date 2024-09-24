@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Retrieve innerHTML and textContent</title>
+</head>
+<body>
+  <p id="myElement"><strong>Bold Text</strong> and plain text.</p>
+
+  <button onclick="showContent()">Show Content</button>
+
+  <p>innerHTML: <span id="innerHTMLContent"></span></p>
+  <p>textContent: <span id="textContentContent"></span></p>
+
+  <script>
+    function showContent() {
+      const element = document.getElementById("myElement");
+      document.getElementById("innerHTMLContent").textContent = element.innerHTML;
+      document.getElementById("textContentContent").textContent = element.textContent;
+    }
+  </script>
+</body>
+</html>

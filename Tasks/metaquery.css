@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box-container {
+    display: flex; 
+    gap: 2px; 
+
+}
+
+.box {
+    background-color:red;
+    color: black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 57px; 
+    height: 330px; 
+    font-size: 18px;
+    transition: background-color 0.3s;
+    border-block-color: black;
+}

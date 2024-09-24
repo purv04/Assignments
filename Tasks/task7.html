@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Hidden Element</title>
+    <style>
+        .hidden {
+            display: none; 
+        }
+        .visible {
+            display: block; 
+            margin-top: 10px;
+            padding: 10px;
+            background-color: lightcoral;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Toggle Element Visibility</h1>
+    <button id="toggleButton">Show/Hide Element</button>
+    
+    <div id="toggleElement" class="hidden">This is a toggleable element!</div>
+
+    <script>
+     
+        document.getElementById("toggleButton").onclick = function() {
+            const toggleElement = document.getElementById("toggleElement");
+            toggleElement.classList.toggle("hidden"); 
+        };
+    </script>
+
+</body>
+</html>
